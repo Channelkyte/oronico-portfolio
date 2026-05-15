@@ -1,0 +1,30 @@
+/* This file is kept for compatibility - main styles are in index.css */
+/* Component-specific animations and overrides can go here */
+
+/* Smooth page transitions */
+.portfolio-app {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Override Framer Motion defaults for better performance */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Ensure smooth scrolling for all browsers */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimize performance for animations */
+.portfolio-app {
+  will-change: auto;
+}
+
+.section {
+  will-change: contents;
+}
